@@ -215,6 +215,11 @@ body{
     margin-bottom:1.5rem;
 }
 
+.contact-item a{
+    text-decoration: none;
+    color: #0f172a;
+}
+
 .about-content p{
     line-height:1.9;
     color:#475467;

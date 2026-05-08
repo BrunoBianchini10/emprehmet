@@ -254,7 +254,7 @@ body{
     padding:2rem;
     box-shadow:0 10px 30px rgba(0,0,0,.05);
     transition:.3s;
-    color: #172554;
+    color: #172554 !important;
 }
 
 .service-card:hover,

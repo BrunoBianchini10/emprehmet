@@ -95,6 +95,40 @@ body{
     background:#b91c1c;
 }
 
+.contact-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:.7rem;
+}
+
+.btn-icon{
+    display:none;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .contact-btn{
+        width:54px;
+        height:54px;
+
+        padding:0;
+
+        border-radius:50%;
+    }
+
+    .btn-text{
+        display:none;
+    }
+
+    .btn-icon{
+        display:block;
+        font-size:1.3rem;
+    }
+}
+
 .hero{
     position:relative;
     min-height:100vh;

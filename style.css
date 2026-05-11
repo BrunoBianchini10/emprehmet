@@ -6,12 +6,14 @@
 
 html{
     scroll-behavior:smooth;
+    overflow-x:hidden; 
 }
 
 body{
     font-family:'Inter',sans-serif;
     background:#f4f7fb;
     color:#0f172a;
+    overflow-x:hidden; 
 }
 
 .container{
@@ -209,7 +211,31 @@ body{
         display:block;
         font-size:1.3rem;
     }
+
+    .hero{
+        overflow:hidden;
+    }
+
+    .hero-content{
+        grid-template-columns:1fr;
+        width:90%;
+    }
+
+    .hero-card{
+        width:100%;
+    }
+
+    .glass-card{
+        width:100%;
+        max-width:100%;
+    }
+
+    .about-grid {    
+        grid-template-columns: none !important;
+    }
+
 }
+
 
 .hero{
     position:relative;

@@ -190,53 +190,6 @@ body{
     display:none;
 }
 
-/* MOBILE */
-
-@media(max-width:900px){
-
-    .contact-btn{
-        width:54px;
-        height:54px;
-
-        padding:0;
-
-        border-radius:50%;
-    }
-
-    .btn-text{
-        display:none;
-    }
-
-    .btn-icon{
-        display:block;
-        font-size:1.3rem;
-    }
-
-    .hero{
-        overflow:hidden;
-    }
-
-    .hero-content{
-        grid-template-columns:1fr;
-        width:90%;
-    }
-
-    .hero-card{
-        width:100%;
-    }
-
-    .glass-card{
-        width:100%;
-        max-width:100%;
-    }
-
-    .about-grid {    
-        grid-template-columns: none !important;
-    }
-
-}
-
-
 .hero{
     position:relative;
     min-height:100vh;
@@ -624,28 +577,55 @@ body{
     text-align:center;
 }
 
-/* @media(max-width:900px){
+/* MOBILE */
+@media(max-width:900px){
 
-    .nav{
+    .contact-btn{
+        width:54px;
+        height:54px;
+        padding:0;
+        border-radius:50%;
+    }
+
+    .btn-text{
         display:none;
     }
 
-    .hero-content,
-    .about-grid,
-    .contact-grid,
-    .cta-box{
-        grid-template-columns:1fr;
+    .btn-icon{
+        display:block;
+        font-size:1.3rem;
     }
 
-    .hero-text h1{
-        font-size:2.8rem;
+    .hero{
+        overflow:hidden;
+    }
+
+    .hero-content{
+        grid-template-columns:none !important;
+        width:90%;
+        padding-top: 5rem;
+    }
+
+    .hero-card{
+        width:100%;
+    }
+
+    .glass-card{
+        width:100%;
+        max-width:100%;
+        margin-bottom: 50px;
     }
 
     .stats-grid{
-        grid-template-columns:repeat(2,1fr);
-        gap:2rem;
+        position:relative;
+        margin-top: 100px;
     }
-} */
+
+    .about-grid {    
+        grid-template-columns: none !important;
+    }
+
+}
 
 @media(max-width:600px){
 
@@ -655,9 +635,12 @@ body{
 
     .stats-grid{
         grid-template-columns:1fr;
+        position:relative;
+        margin-top: 100px;
     }
 
     .hero-buttons{
         flex-direction:column;
     }
 }
+

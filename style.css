@@ -269,12 +269,19 @@ body{
     border-radius:28px;
     padding:2rem;
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(3,1fr);
     box-shadow:0 15px 50px rgba(0,0,0,.08);
 }
 
 .stat-item{
     text-align:center;
+}
+
+.stat-item i{
+    font-size:1.8rem;
+    color:#2563eb;
+    margin-bottom:.5rem;
+    display:block;
 }
 
 .stat-item h2{

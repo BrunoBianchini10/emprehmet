@@ -133,9 +133,88 @@
                         <li><i class="fa-solid fa-circle-check"></i> Perícia Judicial</li>
                         <li><i class="fa-solid fa-circle-check"></i> Gestão Empresarial</li>
                     </ul>
+
+                    <button class="founder-trigger" id="founderTrigger">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=120&auto=format&fit=crop" alt="Dr. Jorge Augusto">
+                        <div class="founder-trigger-text">
+                            <strong>Dr. Jorge Augusto Mendonça Cabral</strong>
+                            <span>Fundador · Médico Perito desde 1989</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
                 </div>
             </div>
         </section>
+
+        <!-- Modal Fundador -->
+        <div class="founder-modal-overlay" id="founderModal">
+            <div class="founder-modal">
+                <button class="founder-modal-close" id="founderModalClose">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="founder-modal-body">
+                    <div class="founder-grid">
+                        <div class="founder-photo-wrapper">
+                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=600&auto=format&fit=crop" alt="Dr. Jorge Augusto Mendonça Cabral">
+                            <div class="founder-badge-row">
+                                <span class="founder-badge"><i class="fa-solid fa-id-card"></i> CREMERJ 52 45.568-7</span>
+                                <span class="founder-badge"><i class="fa-solid fa-gavel"></i> TJRJ 2390</span>
+                            </div>
+                        </div>
+                        <div class="founder-content">
+                            <h3 class="founder-name">Dr. Jorge Augusto Mendonça Cabral</h3>
+                            <blockquote class="founder-intro">
+                                Empresas que sofrem ações trabalhistas têm grandes prejuízos por falta de um Assistente Técnico no ato do Exame Pericial — seja na Perícia Médica, seja na Perícia de Local. Estou à disposição para atuar em Ações Cíveis ou Trabalhistas em qualquer lugar do País.
+                            </blockquote>
+                            <p class="founder-section-title">Formação Acadêmica</p>
+                            <div class="founder-timeline">
+                                <div class="timeline-item">
+                                    <span class="timeline-year">1985</span>
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content"><h5>Medicina</h5><p>Faculdade de Medicina de Valença — RJ</p></div>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="timeline-year">1989</span>
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content"><h5>Pós-graduação em Homeopatia</h5><p>UFES</p></div>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="timeline-year">1995</span>
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content"><h5>Pós-graduação em Medicina do Trabalho</h5><p>UFF — Universidade Federal Fluminense</p></div>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="timeline-year">2007</span>
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content"><h5>Pós-graduação em Gestão, Perícia e Auditoria Ambiental</h5><p>UCAM</p></div>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="timeline-year">2010</span>
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content"><h5>Pós-graduação em Perícia Médica</h5><p>UGF / Fundação Unimed</p></div>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="timeline-year">2021</span>
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content"><h5>Pós-graduação em Medicina Médico-Pericial</h5><p>Faculdade Unimed</p></div>
+                                </div>
+                            </div>
+                            <p class="founder-section-title">Atuação</p>
+                            <div class="founder-stats">
+                                <div class="founder-stat"><h4>1989</h4><p>Início da atuação médico-pericial em ações cíveis e trabalhistas</p></div>
+                                <div class="founder-stat"><h4>2013</h4><p>Médico Perito Previdenciário do Município de Iguaba Grande</p></div>
+                                <div class="founder-stat"><h4>12</h4><p>Comarcas do Estado do Rio de Janeiro em atuação</p></div>
+                                <div class="founder-stat"><h4>15</h4><p>Varas Cíveis com atuação simultânea</p></div>
+                            </div>
+                            <div class="founder-note">
+                                <i class="fa-solid fa-circle-info"></i>
+                                <p>Em processos trabalhistas, o Dr. Jorge atua <strong>exclusivamente como Assistente Técnico</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <section class="services" id="especialidades">
             <div class="container">
@@ -594,6 +673,24 @@
                     link.addEventListener('click', () => {
                         nav.classList.remove('active');
                     });
+                });
+
+                // Modal do fundador
+                const founderModal = document.getElementById('founderModal');
+                document.getElementById('founderTrigger').addEventListener('click', () => {
+                    founderModal.classList.add('open');
+                    document.body.style.overflow = 'hidden';
+                });
+                const closeModal = () => {
+                    founderModal.classList.remove('open');
+                    document.body.style.overflow = '';
+                };
+                document.getElementById('founderModalClose').addEventListener('click', closeModal);
+                founderModal.addEventListener('click', e => {
+                    if (e.target === founderModal) closeModal();
+                });
+                document.addEventListener('keydown', e => {
+                    if (e.key === 'Escape') closeModal();
                 });
 
                 document.querySelectorAll('.service-item-header').forEach(header => {

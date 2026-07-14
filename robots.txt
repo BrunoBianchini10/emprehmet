@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://emprehmet.com.br/sitemap.xml
